@@ -12,6 +12,7 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
+    "aproba": "^2.0.0",
     "count-words": "^1.0.11",
     "stopwords-iso": "^0.4.0"
   },

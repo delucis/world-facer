@@ -1,6 +1,14 @@
 import test from 'ava'
 import topWords from '../lib/top-words'
 
+test('It throws if passed a non-string argument', t => {
+  t.throws(() => { topWords(75) })
+})
+
+test('It throws if passed badly formed options', t => {
+  t.throws(() => { topWords('string', { n: 'three', lang: 57 }) })
+})
+
 test('Identifies the most common word', t => {
   const s = 'A sentence with the word sentence repeated.'
   t.is(topWords(s)[0], 'sentence')
