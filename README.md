@@ -7,5 +7,7 @@
 ## Installation
 
 ```
-npm install --save world-facer
+git clone https://github.com/delucis/world-facer.git
+cd world-facer
+npm install
 ```
