@@ -37,3 +37,8 @@ test('Lets you specify the number of results', t => {
 test('Can’t return more words than are input', t => {
   t.is(topWords('Short sentence', { n: 5 }).length, 2)
 })
+
+test('Can return a 2-tuple of [word, count] if asked', t => {
+  const s = 'A sentence with the word sentence repeated.'
+  t.deepEqual(topWords(s, { includeCount: true })[0], ['sentence', 2])
+})
