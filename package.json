@@ -11,6 +11,10 @@
     "test": "nyc ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
+  "dependencies": {
+    "count-words": "^1.0.11",
+    "stopwords-iso": "^0.4.0"
+  },
   "devDependencies": {
     "ava": "*",
     "commitizen": "*",
