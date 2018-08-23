@@ -5,7 +5,7 @@ import pw from '../lib/paper-words'
 
 const test = ninos(ava)
 
-test('It returns a string that is very long', async t => {
+test.serial('It returns a string that is very long', async t => {
   console.log = t.context.stub()
   console.error = t.context.stub()
   await ps({ n: 3 })
