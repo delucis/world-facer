@@ -23,3 +23,13 @@ test.serial('It will update its cache when it has expired', async t => {
   await TO(500)
   t.is((await pw.data()).length, size + 1)
 })
+
+test('It can return a string of titles', async t => {
+  const titles = await pw.titles()
+  t.is(typeof titles, 'string')
+})
+
+test('It returns a string of authors', async t => {
+  const authors = await pw.authors()
+  t.is(typeof authors, 'string')
+})
