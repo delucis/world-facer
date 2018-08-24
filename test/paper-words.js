@@ -21,7 +21,7 @@ test.serial('It will update its cache when it has expired', async t => {
   const size = (await pw.data()).length
   await ps({ n: 1 })
   await TO(500)
-  t.is((await pw.data()).length, size + 1)
+  t.true((await pw.data()).length > size)
 })
 
 test('It can return a string of titles', async t => {
