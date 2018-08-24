@@ -8,9 +8,12 @@ const test = ninos(ava)
 
 const TO = (t = 10) => new Promise((resolve, reject) => setTimeout(resolve, t))
 
+test.beforeEach('suppress console logging', t => {
+  t.context.spy(console, 'log', () => {})
+  t.context.spy(console, 'error', () => {})
+})
+
 test.serial('It returns a string that is very long', async t => {
-  console.log = t.context.stub()
-  console.error = t.context.stub()
   const s = t.context.spy(CACHE, 'newCache', d => s.original(d, { maxAge: 500 }))
   await ps({ n: 3 })
   const words = await pw()
