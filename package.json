@@ -29,7 +29,7 @@
     "commitizen": "*",
     "coveralls": "*",
     "cz-conventional-changelog": "*",
-    "ninos": "^2.0.1",
+    "ninos": "github:delucis/ninos#enable-returns",
     "nyc": "*",
     "standard": "*",
     "standard-version": "*"
