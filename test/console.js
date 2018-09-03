@@ -35,6 +35,13 @@ test('Can log to the console', t => {
   t.is(console.log.calls[0].arguments[1], '\n      55')
 })
 
+test('Can log with indentation to the console', t => {
+  console.log = t.context.stub()
+  c.l('Test logger')
+  t.is(console.log.calls.length, 1)
+  t.is(console.log.calls[0].arguments[0], '      Test logger')
+})
+
 test('Can warn to the console', t => {
   console.warn = t.context.stub()
   c.warn('Test warner', Infinity, null, ['yikes', 77, 'watch', 'out'], { 'certain-case': true })
@@ -42,9 +49,23 @@ test('Can warn to the console', t => {
   t.is(console.warn.calls[0].arguments[1], '\n      Infinity')
 })
 
+test('Can warn with indentation to the console', t => {
+  console.warn = t.context.stub()
+  c.w('Test warner')
+  t.is(console.warn.calls.length, 1)
+  t.is(console.warn.calls[0].arguments[0], '      Test warner')
+})
+
 test('Can error to the console', t => {
   console.error = t.context.stub()
   c.err('Test errorer', -45, false, ['different', 'array', 'words'], { object: 27 })
   t.is(console.error.calls.length, 1)
   t.is(console.error.calls[0].arguments[1], '\n      -45')
+})
+
+test('Can error with indentation to the console', t => {
+  console.error = t.context.stub()
+  c.e('Test errorer')
+  t.is(console.error.calls.length, 1)
+  t.is(console.error.calls[0].arguments[0], '      Test errorer')
 })
