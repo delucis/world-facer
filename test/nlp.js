@@ -8,6 +8,13 @@ test('Returns the language of input text', t => {
   t.is(nlp.language(s), 'nld')
 })
 
+test('Breaks input text into an array of sentences', t => {
+  const sentences = nlp.sentences(testString)
+  t.log(sentences)
+  t.true(Array.isArray(sentences))
+  t.is(sentences.length, 4)
+})
+
 test('Collects key phrases from input text', async t => {
   let phrases = await nlp.keyphrases(testString)
   t.true(Array.isArray(phrases))
