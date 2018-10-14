@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@delucis/aproba": "^3.0.0",
+    "@perl/qx": "^1.0.2",
     "are-we-there-yet": "^1.1.5",
     "cheerio": "^1.0.0-rc.2",
     "count-words": "^1.0.11",
