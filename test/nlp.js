@@ -10,7 +10,6 @@ test('Returns the language of input text', t => {
 
 test('Breaks input text into an array of sentences', t => {
   const sentences = nlp.sentences(testString)
-  t.log(sentences)
   t.true(Array.isArray(sentences))
   t.is(sentences.length, 4)
 })
