@@ -28,3 +28,13 @@ variable name             | description
 `INSTAPAPER_LOGIN_SECRET` | an Instapaper user’s password
 
   [d5e83b7a]: https://www.instapaper.com/main/request_oauth_consumer_token "Register New OAuth Application - Instapaper"
+
+### Initialising `world-facer`
+
+Once the environment variables are available, run the `bootstrap` script to collect data and prepare `world-facer`. This will probably take quite a while as it involves thousands of calls to scrape data from the internet.
+
+```
+npm run bootstrap
+```
+
+The various online data that `world-facer` depends on change over time. Running `bootstrap` again will update the data, only fetching anything that hasn’t already been fetched.
