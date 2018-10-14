@@ -31,6 +31,7 @@
     "request-promise-native": "^1.0.5",
     "retext": "^5.0.0",
     "retext-keywords": "^4.0.1",
+    "sbd": "^1.0.14",
     "slugg": "^1.2.1",
     "stopwords-iso": "^0.4.0",
     "strip": "^3.0.0"
