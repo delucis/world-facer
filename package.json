@@ -4,6 +4,7 @@
   "author": "Chris Swithinbank <swithinbank@gmail.com> (http://chrisswithinbank.net/)",
   "license": "GPL-3.0",
   "scripts": {
+    "bootstrap": "node ./lib/bootstrap",
     "prerelease": "npm t",
     "release": "standard-version -s",
     "postrelease": "npm publish && git push --follow-tags",
