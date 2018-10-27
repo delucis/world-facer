@@ -44,3 +44,7 @@ test('cropBox: scales & translates if height doesn’t fit', t => {
 test('cropBox: scales & translates if width & height don’t fit', t => {
   t.deepEqual(cropBox([400, 200], [100, 100]), [100, 0, 200, 200])
 })
+
+test('cropBox: returns box if aspect doesn’t match but size fits', t => {
+  t.deepEqual(cropBox([400, 200], [800, 200]), [0, 50, 400, 100])
+})
