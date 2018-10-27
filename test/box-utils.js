@@ -1,5 +1,5 @@
 import test from 'ava'
-import { truncate, fit, cropBox } from '../lib/canvas-utils'
+import { truncate, fit, cropBox } from '../lib/box-utils'
 
 test('truncate: returns input if they match aspect ratio', t => {
   t.deepEqual(truncate([200, 100], 2), [200, 100])
