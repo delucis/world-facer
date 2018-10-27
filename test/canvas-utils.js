@@ -30,17 +30,17 @@ test('fit: scales down if width and height don’t fit', t => {
 })
 
 test('cropBox: returns input as array', t => {
-	t.deepEqual(cropBox([100, 200], [100, 200]), [0, 0, 100, 200])
+  t.deepEqual(cropBox([100, 200], [100, 200]), [0, 0, 100, 200])
 })
 
 test('cropBox: scales & translates if width doesn’t fit', t => {
-	t.deepEqual(cropBox([200, 200], [100, 200]), [50, 0, 100, 200])
+  t.deepEqual(cropBox([200, 200], [100, 200]), [50, 0, 100, 200])
 })
 
 test('cropBox: scales & translates if height doesn’t fit', t => {
-	t.deepEqual(cropBox([200, 200], [200, 100]), [0, 50, 200, 100])
+  t.deepEqual(cropBox([200, 200], [200, 100]), [0, 50, 200, 100])
 })
 
 test('cropBox: scales & translates if width & height don’t fit', t => {
-	t.deepEqual(cropBox([400, 200], [100, 100]), [100, 0, 200, 200])
+  t.deepEqual(cropBox([400, 200], [100, 100]), [100, 0, 200, 200])
 })
