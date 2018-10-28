@@ -41,7 +41,27 @@ test('can return values from a passed set', t => {
   }
 })
 
-test('can be asked to reset when done', t => {
+test('can be reset when done', t => {
+  const size = 50
+  const urn = new URN(size)
+  const values = new Set()
+  for (let i = 0; i < size; i++) {
+    const val = urn.next()
+    values.add(val)
+    t.is(typeof val, 'number')
+    t.is(urn.done, false)
+  }
+  let val = urn.next()
+  t.is(val, undefined)
+  t.is(urn.done, true)
+  urn.reset()
+  val = urn.next()
+  t.is(typeof val, 'number')
+  t.is(urn.done, false)
+  t.true(values.has(val))
+})
+
+test('can be asked to reset automatically when done', t => {
   const size = 50
   const urn = new URN(size, { autoReset: true })
   const values = new Set()
