@@ -77,6 +77,38 @@ test('can be asked to reset automatically when done', t => {
   t.true(values.has(val))
 })
 
+test('can return different order after reset when unseeded', t => {
+  const size = 20
+  const urn = new URN(size, { autoReset: true })
+  const values = []
+  for (let i = 0; i < size; i++) {
+    values.push(urn.next())
+  }
+  t.is(values.length, size)
+  const values2 = []
+  for (let i = 0; i < size; i++) {
+    values2.push(urn.next())
+  }
+  t.is(values2.length, size)
+  t.notDeepEqual(values, values2)
+})
+
+test('can be seeded for deterministic output', t => {
+  const size = 20
+  const urn = new URN(size, { seed: 1, autoReset: true })
+  const values = []
+  for (let i = 0; i < size; i++) {
+    values.push(urn.next())
+  }
+  t.is(values.length, size)
+  const values2 = []
+  for (let i = 0; i < size; i++) {
+    values2.push(urn.next())
+  }
+  t.is(values2.length, size)
+  t.deepEqual(values, values2)
+})
+
 test('throws if instantiated with size < 1', t => {
   t.throws(() => new URN(0))
   t.throws(() => new URN([]))
