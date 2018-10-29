@@ -1,5 +1,5 @@
 import test from 'ava'
-import { Size, Box, Vector } from '../lib/box-classes'
+import { Size, Box, Point } from '../lib/box-classes'
 
 test('Box instances have numerical properties', t => {
   const testBox = new Box([-50, 700, 100, 200])
@@ -29,10 +29,10 @@ test('Box can get its Size for you', t => {
   t.is(derivedSize.height, testBox.height)
 })
 
-test('Box can get its position as a Vector for you', t => {
+test('Box can get its position as a Point for you', t => {
   const testBox = new Box([400, 700])
   const derivedPosition = testBox.position()
-  t.true(derivedPosition instanceof Vector)
+  t.true(derivedPosition instanceof Point)
   t.is(derivedPosition.x, testBox.x)
   t.is(derivedPosition.y, testBox.y)
 })
@@ -212,7 +212,7 @@ test('Box can be instantiated without arguments', t => {
 test('Box throws if not passed an array, Box, or Size', t => {
   t.throws(() => new Box('square'))
   t.throws(() => new Box({ circle: 'O' }))
-  t.throws(() => new Box(new Vector()))
+  t.throws(() => new Box(new Point()))
 })
 
 test('Box throws if passed array is wrong size', t => {
