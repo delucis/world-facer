@@ -37,6 +37,19 @@ test('Box can get its position as a Vector for you', t => {
   t.is(derivedPosition.y, testBox.y)
 })
 
+test('Box can be translated', t => {
+  t.deepEqual(new Box([50, 50]).translate([0, 0]), new Box([50, 50]))
+  t.deepEqual(new Box([50, 50]).translate([10, 10]), new Box([10, 10, 50, 50]))
+  t.deepEqual(new Box([50, 50]).translate([-50, 0]), new Box([-50, 0, 50, 50]))
+  t.deepEqual(new Box([50, 50]).translate([0, -10]), new Box([0, -10, 50, 50]))
+})
+
+test('Box can be translated mutably or immutably', t => {
+  const testBox = new Box([10, 5])
+  t.is(testBox.translate([5, 5]), testBox)
+  t.not(testBox.translated([-5, 10]), testBox)
+})
+
 test('Box can be cropped', t => {
   t.deepEqual(new Box([100, 200]).crop([100, 200]), new Box([100, 200]))
   t.deepEqual(new Box([200, 200]).crop([100, 200]), new Box([50, 0, 100, 200]))
