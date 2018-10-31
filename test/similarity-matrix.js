@@ -50,3 +50,12 @@ test('it can load a matrix from disk', async t => {
   await matrix.load()
   t.true(matrix.matrix.length > 0)
 })
+
+test('it can retrieve similar images', async t => {
+  const matrix = new SimilarityMatrix()
+  await matrix.load()
+  const matches = matrix.getSimilar(0)
+  t.true(Array.isArray(matches))
+  t.false(matches.includes(0))
+  t.true(matches.length > 0)
+})
