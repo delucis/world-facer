@@ -1,7 +1,12 @@
 import test from 'ava'
 import fs from 'fs'
 import SimilarityMatrix from '../lib/similarity-matrix'
+import pps from '../lib/paper-picture-scraper'
 import pp from '../lib/paper-pictures'
+
+test.before('download some images', async t => {
+  await pps({ batchSize: 50 })
+})
 
 test('it constructs a new SimilarityMatrix class', t => {
   t.true(new SimilarityMatrix() instanceof SimilarityMatrix)
