@@ -8,9 +8,12 @@ import pp from '../lib/paper-pictures'
 
 const test = ninos(ava)
 
-test.before('download some data', async t => {
+test.beforeEach('suppress console logging', t => {
   t.context.spy(console, 'log', () => {})
   t.context.spy(console, 'error', () => {})
+})
+
+test.before('download some data', async t => {
   await scrape({ n: 5, recurse: true, maxRecurse: 1 })
   await pps({ batchSize: 50 })
 })
