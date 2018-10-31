@@ -1,10 +1,14 @@
 import test from 'ava'
 import fs from 'fs'
 import SimilarityMatrix from '../lib/similarity-matrix'
+import scrape from '../lib/paper-scraper'
 import pps from '../lib/paper-picture-scraper'
 import pp from '../lib/paper-pictures'
 
-test.before('download some images', async t => {
+test.before('download some data', async t => {
+  t.context.spy(console, 'log', () => {})
+  t.context.spy(console, 'error', () => {})
+  await scrape({ n: 5, recurse: true, maxRecurse: 1 })
   await pps({ batchSize: 50 })
 })
 
