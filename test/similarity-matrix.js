@@ -44,11 +44,11 @@ test('it can build a matrix from paper-pictures', async t => {
   t.is(matrix.matrix.length, pictures.length)
 })
 
-test.cb('it can build a matrix and write it to disk', async t => {
+test.cb('it can build a matrix and write it to disk', t => {
   const matrix = new SimilarityMatrix()
-  await matrix.build()
-  await matrix.write()
-  fs.stat('similarity-matrix.json', t.end)
+  matrix.build()
+    .then(() => matrix.write())
+    .then(() => fs.stat('similarity-matrix.json', t.end))
 })
 
 test('it can load a matrix from disk', async t => {
