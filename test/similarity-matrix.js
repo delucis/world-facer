@@ -41,8 +41,8 @@ test.cb('it can build a matrix and write it to disk', async t => {
   fs.stat('similarity-matrix.json', t.end)
 })
 
-test('it can load a matrix from disk', t => {
+test('it can load a matrix from disk', async t => {
   const matrix = new SimilarityMatrix()
-  matrix.load()
+  await matrix.load()
   t.true(matrix.matrix.length > 0)
 })
