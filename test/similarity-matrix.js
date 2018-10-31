@@ -1,9 +1,12 @@
-import test from 'ava'
+import ava from 'ava'
+import ninos from 'ninos'
 import fs from 'fs'
 import SimilarityMatrix from '../lib/similarity-matrix'
 import scrape from '../lib/paper-scraper'
 import pps from '../lib/paper-picture-scraper'
 import pp from '../lib/paper-pictures'
+
+const test = ninos(ava)
 
 test.before('download some data', async t => {
   t.context.spy(console, 'log', () => {})
