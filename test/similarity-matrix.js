@@ -19,11 +19,12 @@ test.before('download some data', async t => {
 })
 
 test('it constructs a new SimilarityMatrix class', t => {
-  t.true(new SimilarityMatrix() instanceof SimilarityMatrix)
-  t.true(Array.isArray(new SimilarityMatrix().keys))
-  t.true(Array.isArray(new SimilarityMatrix().matrix))
-  t.is(typeof new SimilarityMatrix().cache, 'object')
-  t.is(new SimilarityMatrix().hasBuilt, false)
+  const sm = new SimilarityMatrix()
+  t.true(sm instanceof SimilarityMatrix)
+  t.true(Array.isArray(sm.keys))
+  t.true(Array.isArray(sm.matrix))
+  t.is(typeof sm.cache, 'object')
+  t.is(sm.hasBuilt, false)
 })
 
 test('it can add some images to the matrix ', async t => {
