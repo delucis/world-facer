@@ -1,8 +1,8 @@
 const MS = require('pretty-ms')
-const PS = require('../paper-scraper')
-const PPS = require('../paper-picture-scraper')
-const PT = require('../paper-thumbs')
-const C = require('../console')
+const PS = require('../lib/paper-scraper')
+const PPS = require('../lib/paper-picture-scraper')
+const PT = require('../lib/paper-thumbs')
+const C = require('../lib/console')
 
 async function bootstrap () {
   const startTime = Date.now()
