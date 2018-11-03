@@ -25,7 +25,6 @@ test('it constructs a new SimilarityMatrix class', t => {
   t.true(sm instanceof SimilarityMatrix)
   t.true(Array.isArray(sm.keys))
   t.true(Array.isArray(sm.matrix))
-  t.is(typeof sm.cache, 'object')
   t.is(sm.hasBuilt, false)
 })
 
