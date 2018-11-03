@@ -5,7 +5,9 @@ cache:
     - node_modules
 before_install: npm install -g greenkeeper-lockfile
 install: npm install
-before_script: greenkeeper-lockfile-update
+before_script:
+  - greenkeeper-lockfile-update
+  - node ./test/_bootstrap.js
 script: npm test
 after_script: greenkeeper-lockfile-upload
 after_success: npm run coverage
