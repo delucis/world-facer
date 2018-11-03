@@ -21,6 +21,7 @@
     "count-words": "^1.0.11",
     "date-fns": "^1.29.0",
     "dotenv": "^6.0.0",
+    "eases": "^1.0.8",
     "franc-min": "^4.0.0",
     "gauge": "^2.7.4",
     "image-type": "^3.0.0",
