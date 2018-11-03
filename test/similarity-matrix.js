@@ -5,6 +5,7 @@ import SimilarityMatrix from '../lib/similarity-matrix'
 import scrape from '../lib/paper-scraper'
 import pps from '../lib/paper-picture-scraper'
 import pp from '../lib/paper-pictures'
+import pt from '../lib/paper-thumbs'
 
 const test = ninos(ava)
 
@@ -16,6 +17,7 @@ test.beforeEach('suppress console logging', t => {
 test.before('download some data', async t => {
   await scrape({ n: 5, recurse: true, maxRecurse: 1 })
   await pps({ batchSize: 50 })
+  await pt()
 })
 
 test('it constructs a new SimilarityMatrix class', t => {
