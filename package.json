@@ -6,6 +6,7 @@
   "scripts": {
     "bootstrap": "node ./lib/bootstrap",
     "sketch": "node --max-old-space-size=8192 ./lib/face-sketcher",
+    "make-cues": "node ./lib/cue-speaker",
     "prerelease": "npm t",
     "release": "standard-version -s",
     "postrelease": "npm publish && git push --follow-tags",
