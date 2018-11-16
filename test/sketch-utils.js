@@ -1,5 +1,5 @@
 import test from 'ava'
-import { rangesIncludeValue, lerpBreakpoints, stepBreakpoints } from '../lib/sketch-utils'
+import { rangesIncludeValue, lerpBreakpoints, stepBreakpoints, lerpPoints } from '../lib/sketch-utils'
 
 test('rangesIncludeValue > is true for a number in ranges', t => {
   t.is(rangesIncludeValue([[3, 6], [2, 2.2]], 5), true)
@@ -36,4 +36,15 @@ test('stepBreakpoints > will clamp to lowest breakpoint', t => {
 
 test('stepBreakpoints > will clamp to highest breakpoint', t => {
   t.is(stepBreakpoints([0.2, 0.5], 2), 0.5)
+})
+
+test('lerpPoints > can interpolate between breakpoints', t => {
+  const testPoints = [[0, 1], [1, 0], [2, 2]]
+  t.is(lerpPoints(testPoints, 0.5), 0.5)
+  t.is(lerpPoints(testPoints, 1.5), 1)
+})
+
+test('lerpPoints > clamps values outside of range', t => {
+  t.is(lerpPoints([[2, 10], [3, 30], [4, 200]], 5), 200)
+  t.is(lerpPoints([[2, 10], [3, 30], [4, 200]], 1), 10)
 })
