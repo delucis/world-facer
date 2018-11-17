@@ -1,4 +1,5 @@
 import test from 'ava'
+import circInOut from 'eases/circ-in-out'
 import { rangesIncludeValue, lerpBreakpoints, stepBreakpoints, lerpPoints } from '../lib/sketch-utils'
 
 test('rangesIncludeValue > is true for a number in ranges', t => {
@@ -47,4 +48,18 @@ test('lerpPoints > can interpolate between breakpoints', t => {
 test('lerpPoints > clamps values outside of range', t => {
   t.is(lerpPoints([[2, 10], [3, 30], [4, 200]], 5), 200)
   t.is(lerpPoints([[2, 10], [3, 30], [4, 200]], 1), 10)
+})
+
+test('lerpPoints > can interpolate with smoothstep', t => {
+  const testPoints = [[0, 1], [1, 0], [2, 2]]
+  t.is(lerpPoints(testPoints, 0.75, { smooth: true }), 0.15625)
+  t.is(lerpPoints(testPoints, 0.5, { smooth: true }), 0.5)
+  t.is(lerpPoints(testPoints, 0.25, { smooth: true }), 0.84375)
+})
+
+test('lerpPoints > can interpolate with easing', t => {
+  const testPoints = [[0, 1], [1, 0], [2, 2]]
+  t.is(lerpPoints(testPoints, 0.75, { easing: 'circInOut' }), circInOut(0.25))
+  t.is(lerpPoints(testPoints, 0.5, { easing: 'circInOut' }), 0.5)
+  t.is(lerpPoints(testPoints, 0.25, { easing: 'circInOut' }), circInOut(0.75))
 })
