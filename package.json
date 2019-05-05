@@ -35,7 +35,7 @@
     "make-dir": "^3.0.0",
     "nlcst-to-string": "^2.0.2",
     "ora": "^3.4.0",
-    "pellicola": "^0.8.0",
+    "pellicola": "^0.9.0",
     "pretty-ms": "^5.0.0",
     "profanities": "^2.10.2",
     "request": "^2.88.0",
