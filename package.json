@@ -33,7 +33,6 @@
     "instapaper": "github:delucis/node-instapaper",
     "is-absolute-url": "^3.0.0",
     "make-dir": "^3.0.0",
-    "ninos": "^2.0.2",
     "nlcst-to-string": "^2.0.2",
     "ora": "^3.4.0",
     "pellicola": "^0.8.0",
@@ -50,13 +49,14 @@
     "strip": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "*",
-    "commitizen": "*",
-    "coveralls": "*",
-    "cz-conventional-changelog": "*",
-    "nyc": "*",
-    "standard": "*",
-    "standard-version": "*"
+    "ava": "1.4.1",
+    "commitizen": "3.1.1",
+    "coveralls": "3.0.3",
+    "cz-conventional-changelog": "2.1.0",
+    "ninos": "^3.0.0",
+    "nyc": "14.1.0",
+    "standard": "11.0.1",
+    "standard-version": "5.0.2"
   },
   "config": {
     "commitizen": {
