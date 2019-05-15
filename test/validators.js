@@ -22,6 +22,10 @@ const tests = {
     shouldPass: ['67%', '-50%', '0%', '0.5%', '-27.999%', '194637.23280%'],
     shouldFail: [89, '-50', '0.5', 'text', '', '%', NaN, true, false, null]
   },
+  isInteger: {
+    shouldPass: [1, -999, 0, 0.000, 250.0],
+    shouldFail: [1.2, Math.PI, -99.9, 2.0000001]
+  },
   isPositiveNumber: {
     shouldPass: [0, 1.5, 27.3, Infinity, Math.PI, 3000],
     shouldFail: [-0.5, -15, -Infinity, -9997, '99', NaN, true, false, null]
