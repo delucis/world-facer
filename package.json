@@ -48,6 +48,7 @@
     "retext-keywords": "^4.0.2",
     "sbd": "^1.0.14",
     "slugg": "^1.2.1",
+    "stackblur-canvas": "^2.2.0",
     "stopwords-iso": "^0.4.0",
     "strip": "^3.0.0",
     "user-agents": "^1.0.256"
