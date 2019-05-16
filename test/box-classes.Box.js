@@ -44,6 +44,13 @@ test('Box can be rounded to containing box on integer grid', t => {
   t.deepEqual(new Box([0.75, 0.65, 2.5, 4.5]).round(), new Box([4, 6]))
 })
 
+test('Box can be rounded mutably or immutably', t => {
+  const testBox = new Box([2.5, 4.5])
+  const roundedBox = testBox.rounded()
+  t.deepEqual(roundedBox, new Box([3, 5]))
+  t.deepEqual(testBox, new Box([2.5, 4.5]))
+})
+
 test('Box can be translated', t => {
   t.deepEqual(new Box([50, 50]).translate([0, 0]), new Box([50, 50]))
   t.deepEqual(new Box([50, 50]).translate([10, 10]), new Box([10, 10, 50, 50]))
