@@ -1,0 +1,7 @@
+{
+  "short_name": "NR",
+  "name": "News Reader",
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#00f",
+  "theme_color": "#00f"
+}

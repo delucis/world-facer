@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>i began the day</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#00f" />
+    <meta name="msapplication-navbutton-color" content="#00f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#black-translucent">
+    <style>
+      html { font-size: 100%; line-height: 1.5; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: sans-serif; padding: 5%; background: #00f; color: #ff0; }
+      h1 { font-weight: 400; line-height: 1; margin: 1em 0; }
+      button { display: block; font-size: 1em; padding: .5em; }
+      audio, button { margin: 1em auto; width: 100%; }
+      footer { margin-top: 5em; text-align: center; }
+      .info { text-align: center; font-style: italic; color: #990; }
+      .error { color: #f6f; }
+      @media (min-width: 40em) {
+        html { font-size: 200%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      I began the day inside the world trying to look at it, but it was lying on my face, making it hard to see.
+    </header>
+    <h1>
+      News Reader
+    </h1>
+    <div class="page" id="app">
+      <audio v-if="hasAudio" :src="audioUrl" controls>
+        Looks like your browser doesn’t support the <code><audio></code> element :-(
+      </audio>
+
+      <button v-else type="button" name="get-audio" @click="getAudio" v-text="buttonText" :disabled="isLoading"></button>
+
+      <p v-if="isLoading" class="info">This may take a little while, please be patient 🙏</p>
+
+      <p v-if="didError" class="error">Sorry, there was an error generating audio. Would you mind trying again? 🙏</p>
+    </div>
+    <footer>📰 😬</footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#app',
+        data: {
+          audioUrl: null,
+          isLoading: false,
+          didError: false,
+          initialButtonText: 'Load audio',
+          loadingButtonText: 'Loading audio...'
+        },
+        computed: {
+          hasAudio: function () { return typeof this.audioUrl === 'string' },
+          buttonText: function () { return this.isLoading ? this.loadingButtonText : this.initialButtonText }
+        },
+        methods: {
+          getAudio: function () {
+            Vue.set(this, 'isLoading', true)
+            Vue.set(this, 'didError', false)
+            console.log('getting audio...')
+
+            var context = this
+
+            axios.get('/news-address')
+              .then(res => {
+                Vue.set(context, 'audioUrl', res.data)
+              })
+              .catch(err => {
+                Vue.set(context, 'didError', true)
+              })
+              .then(() => {
+                Vue.set(context, 'isLoading', false)
+              })
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
