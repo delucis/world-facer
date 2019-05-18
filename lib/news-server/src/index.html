@@ -10,14 +10,22 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#black-translucent">
     <style>
+      @font-face {
+        font-family: 'gt_cinetyperegular';
+        src: url('/fonts/gt-cinetype-regular-webfont.woff2') format('woff2'),
+             url('/fonts/gt-cinetype-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
       html { font-size: 100%; line-height: 1.5; }
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font-family: sans-serif; padding: 5%; background: #00f; color: #ff0; }
+      body { font-family: 'gt_cinetyperegular', sans-serif; padding: 5%; background: #00f; color: #ff0; }
       h1 { font-weight: 400; line-height: 1; margin: 1em 0; }
-      button { display: block; font-size: 1em; padding: .5em; }
+      button { display: block; font-size: 1em; padding: .5em; font-family: 'gt_cinetyperegular'; }
       audio, button { margin: 1em auto; width: 100%; }
       footer { margin-top: 5em; text-align: center; }
-      .info { text-align: center; font-style: italic; color: #990; }
+      .info { text-align: center; color: #990; }
       .error { color: #f6f; }
       @media (min-width: 40em) {
         html { font-size: 200%; }
