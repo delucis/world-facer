@@ -58,6 +58,14 @@ const tests = {
     shouldPass: ['rgba(0,0,0,1)', 'rgba(255, 255, 255, 0.5)'],
     shouldFail: ['rgb(0,0,0)', 'rgb(255, 255, 255)', NaN, true, false, null]
   },
+  isHSLString: {
+    shouldPass: ['hsl(20, 30%, 100%)', 'hsl(0.5, 0%, 13.5%)', 'hsl(-137.25, 22%, 62%)'],
+    shouldFail: ['hsl(20, 30, 100)', NaN, true, false, null]
+  },
+  isHSLAString: {
+    shouldPass: ['hsla(20, 30%, 100%, 20%)', 'hsla(0.5, 0%, 13.5%, 0.2)', 'hsla(-137.25, 22%, 62%, 1)'],
+    shouldFail: ['hsla(20, 30%, 100%)', 'hsla(0, 20, 50, 0)', NaN, true, false, null]
+  },
   isCSSColorString: {
     shouldPass: ['blue', '#fff', 'rgb(0,0,0)', 'rgba(255, 255, 255, 0.5)'],
     shouldFail: [NaN, true, false, null]
