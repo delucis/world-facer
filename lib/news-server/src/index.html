@@ -41,15 +41,18 @@
       News Reader
     </h1>
     <div class="page" id="app">
-      <audio v-if="hasAudio" :src="audioUrl" controls>
-        Looks like your browser doesn’t support the <code><audio></code> element :-(
-      </audio>
+      <div v-if="hasAudio" class="audio">
+        <audio :src="audioUrl" controls>
+          Looks like your browser doesn’t support the <code><audio></code> element :-(
+        </audio>
+      </div>
+      <div v-else class="loader">
+        <button type="button" name="get-audio" @click="getAudio" v-text="buttonText" :disabled="isLoading"></button>
 
-      <button v-else type="button" name="get-audio" @click="getAudio" v-text="buttonText" :disabled="isLoading"></button>
+        <p v-if="isLoading" class="info">This may take a little while, please be patient 🙏</p>
 
-      <p v-if="isLoading" class="info">This may take a little while, please be patient 🙏</p>
-
-      <p v-if="didError" class="error">Sorry, there was an error generating audio. Would you mind trying again? 🙏</p>
+        <p v-if="didError" class="error">Sorry, there was an error generating audio. Would you mind trying again? 🙏</p>
+      </div>
     </div>
     <footer>📰 😬</footer>
 
