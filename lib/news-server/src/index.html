@@ -25,13 +25,12 @@
       h1 { font-weight: 400; line-height: 1; margin: 1em 0; }
       button { display: block; font-size: 1em; padding: .5em; font-family: 'gt_cinetyperegular'; }
       audio, button { margin: 1em auto; width: 100%; }
-      footer, .download { margin-top: 5em; text-align: center; }
       a { color: #f96; }
-      .info { text-align: center; color: #990; }
+      .mt-5 { margin-top: 5em; }
+      .ta-c { text-align: center; }
+      .info { color: #990; }
       .error { color: #f6f; }
-      @media (min-width: 40em) {
-        html { font-size: 200%; }
-      }
+      @media (min-width: 40em) { html { font-size: 200%; } }
     </style>
   </head>
   <body>
@@ -46,19 +45,19 @@
         <audio :src="audioUrl" controls>
           Looks like your browser doesn’t support the <code><audio></code> element :-(
         </audio>
-        <p class="download">
+        <p class="mt-5 ta-c">
           💾 <a :href="audioUrl" download>Download audio file</a>
         </p>
       </div>
       <div v-else class="loader">
         <button type="button" name="get-audio" @click="getAudio" v-text="buttonText" :disabled="isLoading"></button>
 
-        <p v-if="isLoading" class="info">This may take a little while, please be patient 🙏</p>
+        <p v-if="isLoading" class="info ta-c">This may take a little while, please be patient 🙏</p>
 
-        <p v-if="didError" class="error">Sorry, there was an error generating audio. Would you mind trying again? 🙏</p>
+        <p v-if="didError" class="error ta-c">Sorry, there was an error generating audio. Would you mind trying again? 🙏</p>
       </div>
     </div>
-    <footer>📰 😬</footer>
+    <footer class="mt-5 ta-c">📰 😬</footer>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
