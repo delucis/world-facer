@@ -15,13 +15,13 @@ test('Breaks input text into an array of sentences', t => {
 })
 
 test('Collects key phrases from input text', async t => {
-  let phrases = await nlp.keyphrases(testString)
+  const phrases = await nlp.keyphrases(testString)
   t.true(Array.isArray(phrases))
   phrases.forEach(phrase => t.is(typeof phrase, 'string'))
 })
 
 test('Collects key words from input text', async t => {
-  let words = await nlp.keywords(testString)
+  const words = await nlp.keywords(testString)
   t.true(Array.isArray(words))
   words.forEach(phrase => t.is(typeof phrase, 'string'))
 })

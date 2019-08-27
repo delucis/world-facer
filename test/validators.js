@@ -11,7 +11,7 @@ const tests = {
     shouldFail: [0, '', Infinity, -Infinity, Math.PI, true, false, null]
   },
   isString: {
-    shouldPass: ['', 'text', ``, `longer \n te\txt`],
+    shouldPass: ['', 'text', '', 'longer \n te\txt'],
     shouldFail: [0, NaN, true, false, null]
   },
   isNumber: {
@@ -72,7 +72,7 @@ const tests = {
   }
 }
 
-for (let fn in tests) {
+for (const fn in tests) {
   test(`${fn}`, t => {
     t.throws(() => v[fn]()) // throws if called without a value
     tests[fn].shouldPass.forEach(val => t.true(v[fn](val)))
