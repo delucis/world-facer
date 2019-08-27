@@ -8,6 +8,7 @@
     "sketch": "node --max-old-space-size=8192 ./lib/face-sketcher",
     "make-cues": "node ./lib/cue-speaker",
     "read-news": "node ./lib/news-reader",
+    "serve-news": "node ./lib/news-server",
     "prerelease": "npm t",
     "release": "standard-version -s",
     "postrelease": "npm publish && git push --follow-tags",
