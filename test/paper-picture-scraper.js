@@ -15,11 +15,11 @@ test.beforeEach('suppress console logging', t => {
 })
 
 test('it downloads some images', async t => {
-  let urls = await pps({ batchSize: 5 })
+  const urls = await pps({ batchSize: 5 })
   t.true(urls.downloaded.length > 0)
 })
 
 test('it can recurse', async t => {
-  let urls = await pps({ batchSize: 5, recurse: true, maxRecurse: 8 })
+  const urls = await pps({ batchSize: 5, recurse: true, maxRecurse: 8 })
   t.true(urls.downloaded.length > 0)
 })
