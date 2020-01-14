@@ -47,7 +47,7 @@ test('Line can be translated mutably or immutably', t => {
 })
 
 test('Line can return its bounding box', t => {
-  t.deepEqual(...new Line([[0, 0], [10, 20]]).box(), ...new Box([10, 20]))
+  t.deepEqual([...new Line([[0, 0], [10, 20]]).box()], [...new Box([10, 20])])
 })
 
 /* ====================================================
