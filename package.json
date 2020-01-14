@@ -3,6 +3,7 @@
   "description": "Scrape and present various data, preparing for Rainy Days",
   "author": "Chris Swithinbank <swithinbank@gmail.com> (http://chrisswithinbank.net/)",
   "license": "GPL-3.0",
+  "private": true,
   "scripts": {
     "bootstrap": "node --max-old-space-size=8192 ./lib/bootstrap",
     "sketch": "node --max-old-space-size=8192 ./lib/face-sketcher",
