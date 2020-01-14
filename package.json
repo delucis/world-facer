@@ -4,7 +4,7 @@
   "author": "Chris Swithinbank <swithinbank@gmail.com> (http://chrisswithinbank.net/)",
   "license": "GPL-3.0",
   "scripts": {
-    "bootstrap": "node ./lib/bootstrap",
+    "bootstrap": "node --max-old-space-size=8192 ./lib/bootstrap",
     "sketch": "node --max-old-space-size=8192 ./lib/face-sketcher",
     "make-cues": "node ./lib/cue-speaker",
     "read-news": "node ./lib/news-reader",
