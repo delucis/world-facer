@@ -27,6 +27,7 @@ variable name             | description
 `INSTAPAPER_LOGIN_KEY`    | an Instapaper user’s e-mail address
 `INSTAPAPER_LOGIN_SECRET` | an Instapaper user’s password
 `NGROK_TOKEN`             | An [ngrok auth token][2f180649] for the news server
+`NGROK_SUBDOMAIN`         | A custom subdomain for the ngrok URL  
 
   [d5e83b7a]: https://www.instapaper.com/main/request_oauth_consumer_token "Register New OAuth Application - Instapaper"
   [2f180649]: https://dashboard.ngrok.com/ "ngrok dashboard"
