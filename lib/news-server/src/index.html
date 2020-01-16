@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>news reader :: i began the day</title>
@@ -28,7 +28,7 @@
       a { color: #f96; }
       .mt-5 { margin-top: 5em; }
       .ta-c { text-align: center; }
-      .info { color: #990; }
+      .info { color: #aa0; }
       .error { color: #f6f; }
       @media (min-width: 40em) { html { font-size: 200%; } }
     </style>
@@ -37,26 +37,32 @@
     <header>
       I began the day inside the world trying to look at it, but it was lying on my face, making it hard to see.
     </header>
-    <h1>
-      News Reader
-    </h1>
-    <div class="page" id="app">
-      <div v-if="hasAudio" class="audio">
-        <audio :src="audioUrl" controls>
-          Looks like your browser doesn’t support the <code><audio></code> element :-(
-        </audio>
-        <p class="mt-5 ta-c">
-          💾 <a :href="audioUrl" download>Download audio file</a>
-        </p>
-      </div>
-      <div v-else class="loader">
-        <button type="button" name="get-audio" @click="getAudio" v-text="buttonText" :disabled="isLoading"></button>
+    <section role="main">
+      <h1>
+        News Reader
+      </h1>
+      <div class="page" id="app">
+        <div v-if="hasAudio" class="audio">
+          <audio :src="audioUrl" controls>
+            Looks like your browser doesn’t support the <code><audio></code> element :-(
+          </audio>
+          <p class="mt-5 ta-c">
+            💾 <a :href="audioUrl" download>Download audio file</a>
+          </p>
+        </div>
+        <div v-else class="loader">
+          <button type="button" name="get-audio" @click="getAudio" v-text="buttonText" :disabled="isLoading"/>
 
-        <p v-if="isLoading" class="info ta-c">This may take a little while, please be patient 🙏</p>
+          <p v-if="isLoading" class="info ta-c">
+            This may take a little while, please be patient 🙏
+          </p>
 
-        <p v-if="didError" class="error ta-c">Sorry, there was an error generating audio. Would you mind trying again? 🙏</p>
+          <p v-if="didError" class="error ta-c">
+            Sorry, there was an error generating audio. Would you mind trying again? 🙏
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
     <footer class="mt-5 ta-c">📰 😬</footer>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
