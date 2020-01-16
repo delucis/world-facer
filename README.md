@@ -3,7 +3,11 @@
 [![Build Status](https://travis-ci.com/delucis/world-facer.svg?token=vMggSwUMhr68RUsUzVGb&branch=latest)](https://travis-ci.com/delucis/world-facer)
 [![Coverage Status](https://coveralls.io/repos/github/delucis/world-facer/badge.svg?branch=master)](https://coveralls.io/github/delucis/world-facer?branch=master)
 
-> Scrape and present various data, preparing for Rainy Days
+> Data scraping, processing, and presentation for [_I began the day inside the
+> world trying to look at it, but it was lying on my face,
+> making it hard to see._][ibtd], for variable ensemble, video and audio playback
+
+  [ibtd]: http://chrisswithinbank.net/2018/11/i-began-the-day-inside-the-world-trying-to-look-at-it-but-it-was-lying-on-my-face-making-it-hard-to-see/
 
 ## Installation
 
