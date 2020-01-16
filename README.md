@@ -26,8 +26,10 @@ variable name             | description
 `INSTAPAPER_API_SECRET`   | Instapaper API consumer secret
 `INSTAPAPER_LOGIN_KEY`    | an Instapaper user’s e-mail address
 `INSTAPAPER_LOGIN_SECRET` | an Instapaper user’s password
+`NGROK_TOKEN`             | An [ngrok auth token][2f180649] for the news server
 
   [d5e83b7a]: https://www.instapaper.com/main/request_oauth_consumer_token "Register New OAuth Application - Instapaper"
+  [2f180649]: https://dashboard.ngrok.com/ "ngrok dashboard"
 
 ### Initialising `world-facer`
 
