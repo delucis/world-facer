@@ -90,6 +90,19 @@ test('Box can be zoomed mutably or immutably', t => {
   t.not(testBox.zoomed(3), testBox)
 })
 
+test('Box can be intersected with another box', t => {
+  t.deepEqual(new Box([300, 200]).intersect([100, 50]), new Box([100, 50]))
+  t.deepEqual(new Box([300, 200]).intersect([-200, -100, 300, 200]), new Box([100, 100]))
+  t.deepEqual(new Box([25, 50, 300, 200]).intersect([100, 50]), new Box([25, 50, 75, 0]))
+  t.deepEqual(new Box([30, 20]).intersect([-40, -30, 30, 20]), new Box([0, 0]))
+})
+
+test('Box can be intersected mutably or immutably', t => {
+  const testBox = new Box([25, 50, 300, 200])
+  t.is(testBox.intersect([100, 75]), testBox)
+  t.not(testBox.intersected([25, 50, 10, 10]), testBox)
+})
+
 /* ================================================================= /*
 
   I N H E R I T E D   M E T H O D S
