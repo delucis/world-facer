@@ -29,6 +29,12 @@ test('Line can be joined to another Line', t => {
   t.deepEqual([...new Line(points1).join(points2)], points1.concat(points2))
 })
 
+test('Line can be joined mutably or immutably', t => {
+  const testLine = new Line([[-10, -5], [20, 30]])
+  t.is(testLine.join([[0, 0], [5, -10]]), testLine)
+  t.not(testLine.joined([[0, 0], [5, -10]]), testLine)
+})
+
 test('Line can be translated', t => {
   t.deepEqual(
     new Line([[0, 0], [20, 30]]).translate([10, 15]),
@@ -48,6 +54,10 @@ test('Line can be translated mutably or immutably', t => {
 
 test('Line can return its bounding box', t => {
   t.deepEqual([...new Line([[0, 0], [10, 20]]).box()], [...new Box([10, 20])])
+})
+
+test('Line can return its bounding box when it is empty', t => {
+  t.deepEqual([...new Line().box()], [...new Box()])
 })
 
 /* ====================================================
