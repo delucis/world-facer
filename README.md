@@ -21,11 +21,13 @@ npm install
 
 ### Required environment variables
 
-Before running `world-facer`, you need some additional secure values in your
+Before using `world-facer`, you need some additional secure values in your
 environment variables. These can be added manually (in CI or on the command
 line) or stored in a [`.env`][b9da293a] file that should never be committed.
 
   [b9da293a]: https://www.npmjs.com/package/dotenv "dotenv NPM package"
+  
+#### For the `bootstrap` script
 
 variable name             | description
 --------------------------|------------
@@ -33,6 +35,11 @@ variable name             | description
 `INSTAPAPER_API_SECRET`   | Instapaper API consumer secret
 `INSTAPAPER_LOGIN_KEY`    | an Instapaper user’s e-mail address
 `INSTAPAPER_LOGIN_SECRET` | an Instapaper user’s password
+
+#### For the `serve-news` script
+
+variable name             | description
+--------------------------|------------
 `NGROK_TOKEN`             | An [ngrok auth token][2f180649] for the news server
 `NGROK_SUBDOMAIN`         | A custom subdomain for the ngrok URL<sup>*</sup>  
 
