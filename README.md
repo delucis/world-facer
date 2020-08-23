@@ -1,7 +1,7 @@
 # world-facer
 
 [![Build Status](https://travis-ci.com/delucis/world-facer.svg?token=vMggSwUMhr68RUsUzVGb&branch=latest)](https://travis-ci.com/delucis/world-facer)
-[![Coverage Status](https://coveralls.io/repos/github/delucis/world-facer/badge.svg?branch=master)](https://coveralls.io/github/delucis/world-facer?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/delucis/world-facer/badge.svg?branch=latest)](https://coveralls.io/github/delucis/world-facer?branch=latest)
 
 > Data scraping, processing, and presentation for [_I began the day inside the
 > world trying to look at it, but it was lying on my face,
