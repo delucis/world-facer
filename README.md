@@ -8,6 +8,24 @@
 > making it hard to see._][ibtd], for variable ensemble, video and audio playback
 
   [ibtd]: http://chrisswithinbank.net/2018/11/i-began-the-day-inside-the-world-trying-to-look-at-it-but-it-was-lying-on-my-face-making-it-hard-to-see/
+  
+---
+
+<p align="center">⚠️</p>
+
+<p align="center">
+  
+  This repository represents the source code for an artistic project and
+  will likely be broken outside of some fairly specific contexts.
+  It is shared here in case any small parts of it may be of interest,
+  but is not really designed for re-use, so please be warned if it misfires
+  or eats your hard-drive.
+  
+</p>
+
+<p align="center">⚠️</p>
+
+---
 
 ## Installation
 
@@ -52,7 +70,8 @@ variable name             | description
 
 Once the environment variables are available, run the `bootstrap` script to
 collect data and prepare `world-facer`. This will probably take quite a while
-as it involves thousands of calls to scrape data from the internet.
+as it involves thousands of calls to scrape data from the internet and some
+fairly slow analysis tasks.
 
 ```
 npm run bootstrap
