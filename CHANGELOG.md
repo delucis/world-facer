@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/delucis/world-facer/compare/v2.0.0...v3.0.0) (2020-08-23)
+
+
+### Features
+
+* **box-classes:** Add intersect method to Box class ([2de731e](https://github.com/delucis/world-facer/commit/2de731e45c324367b41ffdd222a253170cfb621e))
+* **canvas-utils:** Add noiseRect method for applying random noise ([ebaa517](https://github.com/delucis/world-facer/commit/ebaa5171d7a7748e6c00c16c84dfec69dd575e3a))
+* **face-sketcher:** Add flickering words to cursor sketch ([efcb7f6](https://github.com/delucis/world-facer/commit/efcb7f6401b62e1ec2d49aeddebd14b2594660a0))
+* **face-sketcher:** Add noise to blue fade sketch ([a2c983c](https://github.com/delucis/world-facer/commit/a2c983c03fe12263847c21184955c89bf8a84c17))
+* **face-sketcher:** Don’t shift horizon vertically in word cloud sketch ([63ae155](https://github.com/delucis/world-facer/commit/63ae155106b4f2ed7533a4732d28f964e89edd5e))
+* **face-sketcher:** Hard code image IDs into word cloud sketch ([039cd5c](https://github.com/delucis/world-facer/commit/039cd5cfcab9832dcad36c08ed4762901031b4bf))
+* **face-sketcher:** Increase word size slightly at end of word cloud ([5b7a006](https://github.com/delucis/world-facer/commit/5b7a0061d3e8b037cde51adcaea00f0c7eeaff74))
+* **face-sketcher:** Make blue fade fill screen ([8736fdf](https://github.com/delucis/world-facer/commit/8736fdf75bc16ab05484fad5b5c0087fc0fd42e7))
+* **face-sketcher:** Make final word cloud area much bigger ([232d1d2](https://github.com/delucis/world-facer/commit/232d1d273971525cabbd212887137fff881e2e69))
+* **face-sketcher:** Make split screens fill frame & center horizon ([5ec0114](https://github.com/delucis/world-facer/commit/5ec0114ebfd822033585589d78eb4c89387b96ac))
+* **face-sketcher:** Make word cloud dimensions resolution dependent ([84c496c](https://github.com/delucis/world-facer/commit/84c496ce0c23b82fc9f94c1059a61799fff44bbf))
+* **face-sketcher:** Remove vertical offset from word cloud ([e573722](https://github.com/delucis/world-facer/commit/e57372200eb155dd551c3e4a051e9520287abbea))
+* **face-sketcher:** Remove vertical shift from word cloud ([bc844f5](https://github.com/delucis/world-facer/commit/bc844f5694f88fbd18301cfef95484b46781badb))
+* **face-sketcher:** Show far more words at end of word cloud ([74d5227](https://github.com/delucis/world-facer/commit/74d5227dbe14abe4d0f55e7b4e89e482bad87644))
+* **face-sketcher:** Tweak gradient position and color transitions ([c946aa2](https://github.com/delucis/world-facer/commit/c946aa2e64a227b7b27c87946016d5fe03db15fa))
+* **news-maker:** Allow news cues to have intro audio at start ([c974df1](https://github.com/delucis/world-facer/commit/c974df1318b1e786490206bc57d2b336a03e531b))
+* **news-server:** Improve a11y: ARIA roles, lang attr & color contrast ([0e902ac](https://github.com/delucis/world-facer/commit/0e902ac594601951e1bd9a6362298a0bf73f674b))
+* **news-server:** Make ngrok subdomain configurable via environment ([7742da1](https://github.com/delucis/world-facer/commit/7742da13a72470b0fa5e0e268cf93266de9ec5dd))
+* **say:** Allow attaching an audio file to the front of say output ([f5ca655](https://github.com/delucis/world-facer/commit/f5ca6551949b14944d6892b474e65092c65b8e3b))
+* **similarity-matrix:** Limit concurrency of similarity calculations ([e2b46b7](https://github.com/delucis/world-facer/commit/e2b46b73bf8d380b70be2ebc439c1df5a4cb8b80))
+
+
+### Bug Fixes
+
+* **canvas-utils:** Limit pixel effects to the canvas extent ([3d80d3c](https://github.com/delucis/world-facer/commit/3d80d3cf17b4f085e859b60ca8c48b66fb8cbc45))
+
 ## [2.0.0](https://github.com/delucis/world-facer/compare/v1.0.0...v2.0.0) (2020-01-14)
 
 
