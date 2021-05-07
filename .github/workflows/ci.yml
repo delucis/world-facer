@@ -27,6 +27,8 @@ jobs:
             ${{ runner.os }}-node-
             ${{ runner.os }}-
       - name: Install dependencies
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: 1
         run: |
           brew install imagemagick
           npm ci
