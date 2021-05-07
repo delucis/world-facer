@@ -1,6 +1,6 @@
 # world-facer
 
-[![Build Status](https://travis-ci.com/delucis/world-facer.svg?token=vMggSwUMhr68RUsUzVGb&branch=latest)](https://travis-ci.com/delucis/world-facer)
+[![CI Status](https://github.com/delucis/world-facer/actions/workflows/ci.yml/badge.svg)](https://github.com/delucis/world-facer/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/delucis/world-facer/badge.svg?branch=latest)](https://coveralls.io/github/delucis/world-facer?branch=latest)
 
 > Data scraping, processing, and presentation for [_I began the day inside the
