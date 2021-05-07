@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "ava": "2.4.0",
-    "commitizen": "4.0.3",
+    "commitizen": "^4.2.3",
     "coveralls": "3.0.9",
     "cz-conventional-changelog": "3.0.2",
     "ninos": "^3.0.0",
