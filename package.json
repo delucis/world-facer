@@ -15,8 +15,7 @@
     "release": "standard-version -s",
     "postrelease": "npm publish && git push --follow-tags",
     "pretest": "standard",
-    "test": "nyc ava",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test": "nyc --reporter=lcov --reporter=text ava"
   },
   "dependencies": {
     "@delucis/aproba": "^3.0.0",
@@ -61,7 +60,6 @@
   "devDependencies": {
     "ava": "2.4.0",
     "commitizen": "^4.2.3",
-    "coveralls": "3.0.9",
     "cz-conventional-changelog": "3.0.2",
     "ninos": "^3.0.0",
     "nyc": "15.0.0",
