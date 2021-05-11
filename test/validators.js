@@ -109,7 +109,7 @@ const rangeTests = {
   }
 }
 
-for (var fn in rangeTests) {
+for (const fn in rangeTests) {
   test(`${fn} (with custom ranges)`, t => {
     rangeTests[fn].shouldPass.forEach(args => t.true(v[fn](...args)))
     rangeTests[fn].shouldFail.forEach(args => t.false(v[fn](...args)))
