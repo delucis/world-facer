@@ -25,7 +25,7 @@
     "big-json": "^3.1.0",
     "canvas-sketch-util": "^1.10.0",
     "cheerio": "^1.0.0-rc.9",
-    "count-words": "^1.0.12",
+    "count-words": "^1.0.13",
     "date-fns": "^2.21.3",
     "dotenv": "^9.0.0",
     "eases": "^1.0.8",
