@@ -44,7 +44,7 @@
     "p-queue": "^5.0.0",
     "pellicola": "^0.11.5",
     "pretty-ms": "^7.0.1",
-    "profanities": "^2.14.0",
+    "profanities": "^3.0.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
     "resemblejs": "^3.2.5",
