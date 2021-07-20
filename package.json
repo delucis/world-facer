@@ -49,14 +49,14 @@
     "request-promise-native": "^1.0.9",
     "resemblejs": "^3.2.5",
     "retext": "^7.0.1",
-    "retext-keywords": "^6.0.0",
+    "retext-keywords": "^7.0.0",
     "retext-pos": "^3.0.0",
     "sbd": "^1.0.19",
     "slugg": "^1.2.1",
     "stackblur-canvas": "^2.5.0",
     "stopwords-iso": "^1.1.0",
     "strip": "^3.0.0",
-    "user-agents": "^1.0.705"
+    "user-agents": "^1.0.718"
   },
   "devDependencies": {
     "ava": "2.4.0",
