@@ -21,7 +21,7 @@
     "@delucis/aproba": "^3.0.0",
     "@perl/qx": "^1.1.0",
     "any-shell-escape": "^0.1.1",
-    "are-we-there-yet": "^1.1.5",
+    "are-we-there-yet": "^2.0.0",
     "big-json": "^3.1.0",
     "canvas-sketch-util": "^1.10.0",
     "cheerio": "^1.0.0-rc.10",
