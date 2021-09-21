@@ -26,7 +26,7 @@
     "canvas-sketch-util": "^1.10.0",
     "cheerio": "^1.0.0-rc.10",
     "count-words": "^1.0.12",
-    "date-fns": "^2.23.0",
+    "date-fns": "^2.24.0",
     "dotenv": "^10.0.0",
     "eases": "^1.0.8",
     "express": "^4.17.1",
