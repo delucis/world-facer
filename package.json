@@ -47,7 +47,7 @@
     "profanities": "^2.14.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
-    "resemblejs": "^4.0.1",
+    "resemblejs": "^4.1.0",
     "retext": "^7.0.1",
     "retext-keywords": "^6.0.0",
     "retext-pos": "^3.0.0",
