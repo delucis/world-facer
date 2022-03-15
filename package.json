@@ -42,7 +42,7 @@
     "nlcst-to-string": "^2.0.4",
     "ora": "^5.4.1",
     "p-queue": "^5.0.0",
-    "pellicola": "^0.12.0",
+    "pellicola": "^0.13.0",
     "pretty-ms": "^7.0.1",
     "profanities": "^2.14.0",
     "request": "^2.88.2",
