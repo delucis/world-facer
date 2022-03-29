@@ -31,7 +31,7 @@
     "eases": "^1.0.8",
     "express": "^4.17.3",
     "franc-min": "^5.0.0",
-    "gauge": "^4.0.3",
+    "gauge": "^4.0.4",
     "image-type": "^4.1.0",
     "import-fresh": "^3.3.0",
     "inquirer": "^8.2.2",
