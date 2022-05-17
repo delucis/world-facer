@@ -65,7 +65,7 @@
     "ninos": "^3.0.0",
     "nyc": "15.1.0",
     "standard": "17.0.0",
-    "standard-version": "9.3.2"
+    "standard-version": "9.5.0"
   },
   "config": {
     "commitizen": {
