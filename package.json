@@ -22,7 +22,7 @@
     "@perl/qx": "^1.1.0",
     "any-shell-escape": "^0.1.1",
     "are-we-there-yet": "^3.0.1",
-    "big-json": "^3.1.0",
+    "big-json": "^3.2.0",
     "canvas-sketch-util": "^1.10.0",
     "cheerio": "^1.0.0-rc.12",
     "count-words": "^1.0.12",
