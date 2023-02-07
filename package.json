@@ -59,7 +59,7 @@
     "user-agents": "^1.0.1172"
   },
   "devDependencies": {
-    "ava": "2.4.0",
+    "ava": "5.2.0",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "3.3.0",
     "ninos": "^3.0.0",
